@@ -5,9 +5,9 @@ from django.db import models
 
 class SignUp (models.Model):
     email = models.EmailField()
-    fullName = models.CharField(max_length=120, blank=True, null=True)
+    fullName = models.CharField(max_length=120, blank=False, null=True)
     timeStamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return self
+        return self.email
