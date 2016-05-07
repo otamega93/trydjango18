@@ -9,5 +9,4 @@ class SignUpForm(forms.ModelForm):
         fields = ['fullName', 'email']
 
     def clean_email(self):
-        print(self.cleaned_data.get('email'))
-        return "abc@gmail.com"
+        return self.cleaned_data.get('email')
