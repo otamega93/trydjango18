@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>hello world</title>
+    <title>Contact form</title>
 </head>
 <body>
-    <h1>{{title}}</h1>
     <form method="POST" action=""> {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Sign Up">
+        <input type="submit" value="Contact">
     </form>
 </body>
 </html>

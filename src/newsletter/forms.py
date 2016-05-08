@@ -1,6 +1,11 @@
 from django import forms
-
 from .models import SignUp
+
+
+class ContactForm(forms.Form):
+    fullName = forms.CharField()
+    email = forms.EmailField()
+    message = forms.CharField()
 
 
 class SignUpForm(forms.ModelForm):
